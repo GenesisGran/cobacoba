@@ -1,0 +1,93 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  height: 97vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+  min-width: 400px;
+}
+h1 {
+  padding: 1rem;
+  font-size: 3rem;
+  color: white;
+  border: dashed black 4px;
+  text-align: center;
+}
+.vtubers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+img {
+  height: 50vh;
+  animation-duration: 1s;
+  animation-name: slidein;
+  box-shadow: 10px 10px 2px 2px rgb(175, 175, 175);
+  transition: height 150ms ease-in-out;
+}
+img:hover {
+  height: 52vh;
+}
+figcaption {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.sumire img {
+  border: 5px solid #e0dde4;
+}
+.sumire figcaption {
+  border: solid 0.2rem #e0dde4;
+  background-color: #241323;
+  color: #e0dde4;
+}
+.ui img {
+  border: 5px solid #fce6cf;
+}
+.ui figcaption {
+  border: 0.2rem solid #fce6cf;
+  background-color: black;
+  color: #fce6cf;
+}
+.nazuna img {
+  border: 5px solid #341421;
+}
+.nazuna figcaption {
+  border: 0.2rem solid #341421;
+  background-color: white;
+  color: #341421;
+}
+
+@keyframes slidein {
+  from {
+    margin-top: -150px;
+    opacity: 0;
+    box-shadow: 10px 10px 2px 2px grey;
+  }
+  to {
+    margin-top: 0;
+    opacity: 1;
+    box-shadow: 10px 10px 2px 2px rgb(175, 175, 175);
+  }
+}
+
+@media all and (max-width: 1200px) {
+  body {
+    height: auto;
+  }
+  .vtubers {
+    flex-wrap: wrap;
+    min-width: 380px;
+  }
+}
