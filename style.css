@@ -4,19 +4,53 @@
   box-sizing: border-box;
 }
 
+.changeThemeButton {
+  position: fixed;
+  width: 100px;
+  top: 3%;
+  right: 1%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 100ms ease-out;
+  transform: scale(1);
+  text-align: center;
+}
+.changeThemeButton:hover,
+.changeThemeButton:focus {
+  transform: scale(1.1);
+}
+
 body {
-  height: 97vh;
+  --background: url(images/background/Shigure\ Ui\ 01.jpg);
+  --text-color: black;
+  margin: 0;
+  height: 99.9vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: grey;
+  background-color: gray;
+  background: var(--background);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   min-width: 400px;
+  color: var(--text-color);
+  transition: 0.5s ease-out;
+}
+body.sumireBackground {
+  --background: url(images/background/sumireWallpaper.jpg);
+  --text-color: black;
+}
+body.nazunaBackground {
+  --background: url(images/background/nazunaWallpaper.jfif);
+  --text-color: white;
 }
 h1 {
   padding: 1rem;
   font-size: 3rem;
-  color: white;
   border: dashed black 4px;
   text-align: center;
 }
@@ -29,14 +63,14 @@ a {
   text-decoration: none;
   font-weight: bold;
 }
-img {
+.vtubers img {
   height: 50vh;
   animation-duration: 1s;
   animation-name: slidein;
   box-shadow: 10px 10px 2px 2px rgb(175, 175, 175);
   transition: height 150ms ease-in-out;
 }
-img:hover {
+.vtubers img:hover {
   height: 52vh;
 }
 figcaption {
@@ -85,6 +119,11 @@ figcaption {
 @media all and (max-width: 1200px) {
   body {
     height: auto;
+    background: none;
+    background-color: gray;
+  }
+  body.yellowish {
+    background-color: rgb(160, 160, 1);
   }
   .vtubers {
     flex-wrap: wrap;
