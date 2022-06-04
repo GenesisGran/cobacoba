@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
 *,
 *::before,
 *::after {
@@ -23,6 +25,7 @@
 }
 
 body {
+  font-family: "Roboto", sans-serif;
   --background: url(images/background/Shigure\ Ui\ 01.jpg);
   --text-color: black;
   margin: 0;
@@ -59,24 +62,23 @@ h1 {
   justify-content: center;
   align-items: center;
 }
-a {
-  text-decoration: none;
-  font-weight: bold;
-}
-.vtubers img {
+.vtubers figure img {
   height: 50vh;
   animation-duration: 1s;
   animation-name: slidein;
   box-shadow: 10px 10px 2px 2px rgb(175, 175, 175);
   transition: height 150ms ease-in-out;
 }
-.vtubers img:hover {
+.vtubers figure img:hover {
   height: 52vh;
 }
 figcaption {
   text-align: center;
   font-size: 1.5rem;
   margin-bottom: 1rem;
+}
+.profileImage img {
+  height: 70vh;
 }
 .sumire img {
   border: 5px solid #e0dde4;
@@ -114,6 +116,80 @@ figcaption {
     opacity: 1;
     box-shadow: 10px 10px 2px 2px rgb(175, 175, 175);
   }
+}
+
+.button {
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0;
+}
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: solid 1px black;
+  border-radius: 10px;
+  z-index: 999;
+  background-color: white;
+  width: 500px;
+  max-width: 80%;
+}
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px black;
+}
+.modal-header .title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.modal-header .closeButton {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+}
+.modal-body {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 1.5rem;
+}
+.profileText {
+  text-align: justify;
+}
+.youtube {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.youtube img {
+  height: 3rem;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
 }
 
 @media all and (max-width: 1200px) {

@@ -25,27 +25,109 @@
     </button>
 
     <div class="vtubers">
-      <a
-        class="sumire"
-        href="https://www.youtube.com/channel/UCyLGcqYs7RsBb3L0SJfzGYA"
-        ><figure>
-          <figcaption>Kaga Sumire (花芽すみれ)</figcaption>
-          <img src="images/vtubers/KagaSumire.jpg" alt="Kaga Sumire" /></figure
-      ></a>
-      <a
-        class="ui"
-        href="https://www.youtube.com/channel/UCt30jJgChL8qeT9VPadidSw"
-        ><figure>
-          <figcaption>Shigure Ui (しぐれうい)</figcaption>
-          <img src="images/vtubers/ShigureUi.jpg" alt="Shigure Ui" /></figure
-      ></a>
-      <a
-        class="nazuna"
-        href="https://www.youtube.com/c/%E3%81%AA%E3%81%9A%E3%81%A1%E3%82%83%E3%82%93%E3%81%AD%E3%82%8BNazunaChannel"
-        ><figure>
-          <figcaption>Kaga Nazuna (花芽なずな)</figcaption>
-          <img src="images/vtubers/KagaNazuna.jpg" alt="Kaga Nazuna" /></figure
-      ></a>
+      <button data-modal-target="#modalSumire" class="button sumireButton">
+        <div class="sumire">
+          <figure>
+            <figcaption>Kaga Sumire (花芽すみれ)</figcaption>
+            <img src="images/vtubers/KagaSumire.jpg" alt="Kaga Sumire" />
+          </figure>
+        </div>
+      </button>
+      <div class="modal" id="modalSumire">
+        <div class="modal-header">
+          <div class="title">Kaga Sumire (花芽すみれ)</div>
+          <button data-close-button class="closeButton">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="profileImage">
+            <img
+              src="images/vtubers/KagaSumire_fullBody.jpg"
+              alt="Kaga Sumire"
+            />
+          </div>
+          <div class="profileText">
+            Kaga Sumire (花芽すみれ) is a female Japanese Virtual YouTuber
+            affiliated with Lupinus Virtual Games, an eSports team under under
+            the Virtual eSports Project, debuting alongside with her twin sister
+            Kaga Nazuna, followed with Ichinose Uruha and Kogara Toto.
+            <br /><br />
+            <a
+              class="youtube"
+              href="https://www.youtube.com/channel/UCyLGcqYs7RsBb3L0SJfzGYA"
+              target="_blank"
+              ><img src="images/icon/youtubeLogo.png" alt="Youtube Link"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <button data-modal-target="#modalUi" class="button uiButton">
+        <div class="ui">
+          <figure>
+            <figcaption>Shigure Ui (しぐれうい)</figcaption>
+            <img src="images/vtubers/ShigureUi.jpg" alt="Shigure Ui" />
+          </figure>
+        </div>
+      </button>
+      <div class="modal" id="modalUi">
+        <div class="modal-header">
+          <div class="title">Shigure Ui (しぐれうい)</div>
+          <button data-close-button class="closeButton">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="profileImage">
+            <img src="images/vtubers/ShigureUi_fullbody.jpg" alt="Shigure Ui" />
+          </div>
+          <div class="profileText">
+            Shigure Ui (しぐれうい) is a female Japanese Virtual YouTuber and
+            illustrator. She also did the character designs for the light novel
+            series OsaMake and anime series WIXOSS DIVA(A)LIVE.
+            <br /><br />
+            <a
+              class="youtube"
+              href="https://www.youtube.com/channel/UCt30jJgChL8qeT9VPadidSw"
+              target="_blank"
+              ><img src="images/icon/youtubeLogo.png" alt="Youtube Link"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <button data-modal-target="#modalNazuna" class="button nazunaButton">
+        <div class="nazuna">
+          <figure>
+            <figcaption>Kaga Nazuna (花芽なずな)</figcaption>
+            <img src="images/vtubers/KagaNazuna.jpg" alt="Kaga Nazuna" />
+          </figure>
+        </div>
+      </button>
+      <div class="modal" id="modalNazuna">
+        <div class="modal-header">
+          <div class="title">Kaga Nazuna (花芽なずな)</div>
+          <button data-close-button class="closeButton">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="profileImage">
+            <img
+              src="images/vtubers/KagaNazuna_fullBody.jpg"
+              alt="Kaga Nazuna"
+            />
+          </div>
+          <div class="profileText">
+            Kaga Nazuna (花芽なずな) is a female Japanese Virtual YouTuber. She
+            is a member of Lupinus Virtual Games, an eSports team under Virtual
+            eSports Project, debuting alongside with her older twin sister Kaga
+            Sumire followed by Ichinose Uruha and Kogara Toto.
+            <br /><br />
+            <a
+              class="youtube"
+              href="https://www.youtube.com/c/%E3%81%AA%E3%81%9A%E3%81%A1%E3%82%83%E3%82%93%E3%81%AD%E3%82%8BNazunaChannel"
+              target="_blank"
+              ><img src="images/icon/youtubeLogo.png" alt="Youtube Link"
+            /></a>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <div id="overlay"></div>
   </body>
 </html>
