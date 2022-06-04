@@ -23,23 +23,28 @@
 .changeThemeButton:focus {
   transform: scale(1.1);
 }
+.changeThemeButton .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 body {
   font-family: "Roboto", sans-serif;
   --background: url(images/background/Shigure\ Ui\ 01.jpg);
   --text-color: black;
   margin: 0;
-  height: 99.9vh;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   background-color: gray;
   background: var(--background);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  min-width: 400px;
   color: var(--text-color);
   transition: 0.5s ease-out;
 }
@@ -61,6 +66,8 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  min-width: 380px;
 }
 .vtubers figure img {
   height: 50vh;
@@ -134,8 +141,8 @@ figcaption {
   border-radius: 10px;
   z-index: 999;
   background-color: white;
-  width: 500px;
-  max-width: 80%;
+  min-width: 300px;
+  width: 40%;
 }
 .modal.active {
   transform: translate(-50%, -50%) scale(1);
@@ -150,6 +157,9 @@ figcaption {
 .modal-header .title {
   font-size: 2rem;
   font-weight: bold;
+}
+.title > * {
+  display: inline;
 }
 .modal-header .closeButton {
   cursor: pointer;
@@ -167,6 +177,7 @@ figcaption {
 }
 .profileText {
   text-align: justify;
+  font-size: 1.25rem;
 }
 .youtube {
   display: flex;
@@ -201,8 +212,51 @@ figcaption {
   body.yellowish {
     background-color: rgb(160, 160, 1);
   }
-  .vtubers {
+  .modal-header .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
     flex-wrap: wrap;
-    min-width: 380px;
+    font-size: 1.5rem;
+  }
+  .modal-body {
+    flex-wrap: wrap;
+  }
+  .profileImage {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .profileImage img {
+    height: 50vh;
+  }
+  .profileText {
+    font-size: 1rem;
+  }
+}
+@media all and (max-width: 870px) {
+  h1 {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  .changeThemeButton {
+    width: 60px;
+    transform: scale(0.8);
+  }
+  .changeThemeButton:hover,
+  .changeThemeButton:focus {
+    transform: scale(0.9);
+  }
+  .vtubers figure img {
+    height: 30vh;
+  }
+  .vtubers figure img:hover {
+    height: 32vh;
+  }
+  .profileImage img {
+    height: 40vh;
   }
 }
