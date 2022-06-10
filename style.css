@@ -250,13 +250,17 @@ figcaption {
   .changeThemeButton:focus {
     transform: scale(0.9);
   }
-  .vtubers figure img {
-    height: 30vh;
-  }
-  .vtubers figure img:hover {
-    height: 32vh;
-  }
   .profileImage img {
     height: 40vh;
+  }
+}
+@media all and (max-height: 500px) {
+  .modal {
+    width: auto;
+    height: fit-content;
+  }
+  .modal-body {
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
 }
